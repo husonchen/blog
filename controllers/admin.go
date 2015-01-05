@@ -16,8 +16,10 @@ type AdminController struct {
 func (this *AdminController) Login() {
 	username := this.GetString("username")
 	password := this.GetString("password")
+
 	if username == "chenxiaochen" && password == "misssonyatong" {
 		this.TplNames = "admin/index.tpl"
+		this.SetSession("uid", "chenxiaochen")
 	} else {
 		this.TplNames = "admin/login.tpl"
 	}
