@@ -1,8 +1,8 @@
 package controllers
 
 import (
+	"blog/modules"
 	"fmt"
-	"github.com/astaxie/beego"
 	"os"
 	"path/filepath"
 	"strings"
@@ -10,7 +10,7 @@ import (
 )
 
 type AdminController struct {
-	beego.Controller
+	baseController
 }
 
 func (this *AdminController) Login() {
@@ -26,6 +26,16 @@ func (this *AdminController) Login() {
 }
 
 func (this *AdminController) AddArticle() {
+	title := this.GetString("title")
+	content := this.GetString("content")
+	if title != "" {
+		var article modules.Article
+		article.Title = title
+		article.Content = content
+		article.Posttime = this.getTime()
+		article.Insert()
+	}
+
 	this.TplNames = "admin/addArticle.tpl"
 }
 

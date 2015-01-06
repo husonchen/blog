@@ -20,13 +20,13 @@
 						 	<div class="control-group">
 							  <label class="control-label" for="typeahead">文章名</label>
 							  <div class="controls">
-								<input type="text" class="span6 typeahead" name='ver' value=''>
+								<input type="text" class="span6 typeahead" name='title' value=''>
 							  </div>
 							</div>
 						 	<div class="control-group">
 								  <label class="control-label" for="textarea2">内容</label>
 								  <div class="controls">
-									<textarea name='drsc' class="cleditor" id="textarea2" rows="3"></textarea>
+									<textarea name='content' class="cleditor" id="textarea2" rows="3"></textarea>
 								  </div>
 							</div>
 						 	<div class="form-actions">

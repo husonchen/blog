@@ -1,16 +1,16 @@
 package controllers
 
 import (
-	"github.com/astaxie/beego"
+	"blog/modules"
 )
 
 type MainController struct {
-	beego.Controller
+	baseController
 }
 
 func (c *MainController) Get() {
-	q := c.GetString("q")
-	c.Data["Website"] = q
-	c.Data["Email"] = q
+	var module modules.Article
+	last := module.GetLastArticle()
+	c.Data["article"] = last
 	c.TplNames = "index.tpl"
 }

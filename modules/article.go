@@ -1,26 +1,61 @@
 package modules
 
 import (
-    "fmt"
-    "github.com/astaxie/beego/orm"
-    _ "github.com/go-sql-driver/mysql" // import your used driver
+	"fmt"
+	"github.com/astaxie/beego/orm"
+	_ "github.com/go-sql-driver/mysql" // import your used driver
+	"time"
 )
 
-type Article Struct{
-	Id			int
-	Title       string `orm:"size(255)"`
-	Content     string 
+type Article struct {
+	Id       int
+	Title    string    `orm:"size(255);index"`
+	Content  string    `orm:"type(text)"`
+	Posttime time.Time `orm:"type(datetime)"`
 }
 
-func init() {
-    // register model
-    orm.RegisterModel(new(Article))
-
-    // set default database
-    orm.RegisterDataBase("default", "mysql", "root:root@/my_db?charset=utf8", 30)
+func (m *Article) TableName() string {
+	return "article"
 }
 
-func (this *Article)Insert(a Article) {
-    o := orm.NewOrm()
-	id, err := o.Insert(&a)
+func (m *Article) Insert() error {
+	if _, err := orm.NewOrm().Insert(m); err != nil {
+		return err
+	}
+	return nil
+}
+
+func (m *Article) Read(fields ...string) error {
+	if err := orm.NewOrm().Read(m, fields...); err != nil {
+		return err
+	}
+	return nil
+}
+
+func (m *Article) Update(fields ...string) error {
+	if _, err := orm.NewOrm().Update(m, fields...); err != nil {
+		return err
+	}
+	return nil
+}
+
+func (m *Article) Delete() error {
+	if _, err := orm.NewOrm().Delete(m); err != nil {
+		return err
+	}
+	return nil
+}
+
+func (m *Article) Query() orm.QuerySeter {
+	return orm.NewOrm().QueryTable(m)
+}
+
+func (m *Article) GetLastArticle() Article {
+	var ari Article
+	err := m.Query().OrderBy("-id").Limit(1).One(&ari)
+	if err == orm.ErrNoRows {
+		// 没有找到记录
+		fmt.Printf("Not row found")
+	}
+	return ari
 }

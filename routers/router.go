@@ -8,9 +8,8 @@ import (
 )
 
 func init() {
-	beego.AutoRouter(&controllers.MainController{})
 	beego.AutoRouter(&controllers.AdminController{})
-	// beego.Router("/", &controllers.MainController{})
+	beego.Router("/", &controllers.MainController{})
 	beego.InsertFilter("/admin/*", beego.BeforeRouter, FilterAdmin)
 }
 
