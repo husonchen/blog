@@ -59,3 +59,12 @@ func (m *Article) GetLastArticle() Article {
 	}
 	return ari
 }
+
+func (m *Article) GetLast5Article() []*Article {
+	var articles []*Article
+	_, err := m.Query().OrderBy("-id").Limit(5).All(&articles)
+	if err != nil {
+		fmt.Println("error")
+	}
+	return articles
+}

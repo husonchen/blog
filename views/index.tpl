@@ -73,18 +73,7 @@
   <div class="am-collapse am-topbar-collapse" id="doc-topbar-collapse">
     <ul class="am-nav am-nav-pills am-topbar-nav">
       <li class="am-active"><a href="#">首页</a></li>
-      <li><a href="#">项目</a></li>
-      <li class="am-dropdown" data-am-dropdown>
-        <a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
-          菜单 <span class="am-icon-caret-down"></span>
-        </a>
-        <ul class="am-dropdown-content">
-          <li class="am-dropdown-header">标题</li>
-          <li><a href="#">关于我们</a></li>
-          <li><a href="#">关于字体</a></li>
-          <li><a href="#">TIPS</a></li>
-        </ul>
-      </li>
+      <li><a href="#">目录</a></li>
     </ul>
 
     <form class="am-topbar-form am-topbar-left am-form-inline am-topbar-right" role="search">
@@ -128,19 +117,16 @@
       <section class="am-panel am-panel-default">
         <div class="am-panel-hd">关于我</div>
         <div class="am-panel-bd">
-          <p>2010年毕业于华南理工大学，现从事互联网开发工作</p>
+          <p>2014年毕业于华南理工大学，现从事互联网开发工作</p>
           <a class="am-btn am-btn-success am-btn-sm" href="#">查看更多 →</a>
         </div>
       </section>
       <section class="am-panel am-panel-default">
-        <div class="am-panel-hd">文章目录</div>
+        <div class="am-panel-hd">最新文章</div>
         <ul class="am-list blog-list">
-          <li><a href="#">Google fonts 的字體（sans-serif 篇）</a></li>
-          <li><a href="#">[but]服貿最前線？－再訪桃園機場</a></li>
-          <li><a href="#">到日星鑄字行學字型</a></li>
-          <li><a href="#">glyph font vs. 漢字（上）</a></li>
-          <li><a href="#">浙江民間書刻體上線</a></li>
-          <li><a href="#">[極短篇] Android v.s iOS，誰的字體好讀？</a></li>
+          {{range $k, $v := .list}}
+          <li><a href="#">{{$v.Title}}</a></li>
+          {{end}}
         </ul>
       </section>
 
@@ -148,7 +134,7 @@
         <div class="am-panel-hd">微信号</div>
         <div class="am-panel-bd">
           <img class="am-thumbnail"
-                     src="http://img4.duitang.com/uploads/blog/201406/15/20140615230220_F5LiM.thumb.224_0.jpeg" alt=""/>
+                     src="/static/img/weixin.jpeg" alt=""/>
         </div>
       </section>
     </div>
@@ -157,8 +143,8 @@
 </div>
 
 <footer class="blog-footer">
-  <p>blog template<br/>
-    <small>© Copyright XXX. by the AmazeUI Team.</small>
+  <p>blog <br/>
+    <small>© Copyright XXX. by husonchen.</small>
   </p>
 </footer>
 

@@ -30,7 +30,7 @@
 						{{range $k, $v := .files}}
 						<li id="image-24" class="thumbnail">
 								<a style="background:url({{$v}})" title="" href="{{$v}}"><img class="grayscale" src="{{$v}}" alt=""></a>
-								{{$v}}
+								http://sonyatong{{$v}}
 						</li>
 						{{end}}
 					</ul>
