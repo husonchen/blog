@@ -103,8 +103,12 @@
         </div>
       </div>
     </article>
-
-
+    <div data-am-widget="duoshuo" class="am-duoshuo am-duoshuo-default" data-ds-short-name="sonyatong">
+  <div class="ds-thread" data-thread-key="{{.article.Id}}" data-title="{{.article.Title}}" data-url="http://sonyatong.com/"></div>
+</div>
+  <script type="text/javascript">
+var duoshuoQuery = {short_name:"sonyatong"};
+</script>
     <hr class="am-article-divider blog-hr">
     <ul class="am-pagination blog-pagination">
       <li class="am-pagination-prev"><a href="">&laquo; 上一页</a></li>
