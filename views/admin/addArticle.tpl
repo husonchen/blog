@@ -1,7 +1,7 @@
-{{template "header"}}
+{{template "admin/header"}}
 <body>
-	{{template "topbar"}}
-	{{template "menus"}}
+	{{template "admin/topbar"}}
+	{{template "admin/menus"}}
 	<div id="content" class="span10">
 		<div class="row-fluid sortable">
 			<div class="box span12">
@@ -26,7 +26,7 @@
 						 	<div class="control-group">
 								  <label class="control-label" for="textarea2">内容</label>
 								  <div class="controls">
-									<textarea name='content' class="cleditor" id="textarea2" rows="3"></textarea>
+									<textarea name='content'  id="aricontent"></textarea>
 								  </div>
 							</div>
 						 	<div class="form-actions">
@@ -43,3 +43,10 @@
 	
 </body>
 </html>
+<script type="text/javascript">
+      $(document).ready(function() {
+
+        //设置编辑器的高与宽
+        $("#aricontent").cleditor({ width:1200,height:1500})[0].focus();
+      });
+</script>

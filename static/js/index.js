@@ -1,0 +1,4 @@
+$("#dir").click();
+function getDir(){
+	
+}

@@ -1,4 +1,4 @@
-{{define "topbar"}}
+{{define "admin/topbar"}}
 <!-- topbar starts -->
 	<div class="navbar">
 		<div class="navbar-inner">

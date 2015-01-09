@@ -1,7 +1,7 @@
-{{template "header"}}
+{{template "admin/header"}}
 <body>
-	{{template "topbar"}}
-	{{template "menus"}}
+	{{template "admin/topbar"}}
+	{{template "admin/menus"}}
 	<div id="content" class="span10">
 		<div class="row-fluid sortable">
 			<div class="box-content">

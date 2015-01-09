@@ -1,7 +1,7 @@
-{{template "header"}}
+{{template "admin/header"}}
 <body>
-	{{template "topbar"}}
-	{{template "menus"}}
+	{{template "admin/topbar"}}
+	{{template "admin/menus"}}
 	<!-- external javascript================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
 
