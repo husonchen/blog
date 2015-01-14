@@ -1,7 +1,7 @@
 {{define "footer"}}
 <footer class="blog-footer">
-  <p>blog <br/>
-    <small>© Copyright XXX. by husonchen.</small>
+  <p>陈晓辰的博客 <br/>
+    <small>©所有权利保留 <a href="http://www.miitbeian.gov.cn/">粤ICP备15003488号</a></small>
   </p>
 </footer>
 
