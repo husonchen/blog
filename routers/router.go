@@ -10,6 +10,7 @@ import (
 func init() {
 	beego.AutoRouter(&controllers.AdminController{})
 	beego.Router("/", &controllers.MainController{})
+	beego.Router("/p/*", &controllers.MainController{}, "*:GetArtical")
 	beego.InsertFilter("/admin/*", beego.BeforeRouter, FilterAdmin)
 }
 

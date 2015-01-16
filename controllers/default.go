@@ -2,6 +2,8 @@ package controllers
 
 import (
 	"blog/modules"
+	"fmt"
+	"strconv"
 )
 
 type MainController struct {
@@ -14,6 +16,17 @@ func (c *MainController) Get() {
 
 	articles := module.GetLast5Article()
 	c.Data["article"] = last
+	c.Data["list"] = articles
+	c.TplNames = "index.tpl"
+}
+
+func (c *MainController) GetArtical() {
+	id, _ := strconv.Atoi(c.Ctx.Input.Params["0"])
+	fmt.Println(id)
+	article := modules.Article{Id: id}
+	article.Read()
+	articles := article.GetLast5Article()
+	c.Data["article"] = article
 	c.Data["list"] = articles
 	c.TplNames = "index.tpl"
 }
