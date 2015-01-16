@@ -33,7 +33,7 @@
       <li class="am-pagination-next"><a href="">下一页 &raquo;</a></li>
     </ul>
   </div>
-  {{template "sider"}}
+  {{template "sider" .}}
 </div>
 
  {{template "footer"}}

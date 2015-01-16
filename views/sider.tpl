@@ -12,7 +12,7 @@
         <div class="am-panel-hd">最新文章</div>
         <ul class="am-list blog-list">
           {{range $k, $v := .list}}
-          <li><a href="#">{{$v.Title}}</a></li>
+          <li><a href="#">{{str2html $v.Title}}</a></li>
           {{end}}
         </ul>
       </section>
