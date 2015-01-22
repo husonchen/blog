@@ -17,4 +17,14 @@
 <script src="/static/js/jquery.min.js"></script>
 <script src="http://cdn.amazeui.org/amazeui/2.0.0/js/amazeui.min.js"></script>
 <!--<![endif]-->
+<script type="text/javascript">
+$(document).ready(function(){
+  var url = window.location.pathname;
+  var top = "";
+  if(url != ""){
+    top = url.split("/")[1];
+  }
+  $("#top"+top).attr("class","am-active");
+  });
+</script>
 {{end}}

@@ -10,8 +10,8 @@
 
   <div class="am-collapse am-topbar-collapse" id="doc-topbar-collapse">
     <ul class="am-nav am-nav-pills am-topbar-nav">
-      <li class="am-active"><a href="#">首页</a></li>
-      <li id="dir"><a href="#">目录</li>
+      <li id="top"><a href="/">首页</a></li>
+      <li id="topdir"><a href="/dir">目录</li>
     </ul>
 
     <form class="am-topbar-form am-topbar-left am-form-inline am-topbar-right" role="search">

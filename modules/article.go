@@ -68,3 +68,13 @@ func (m *Article) GetLast5Article() []*Article {
 	}
 	return articles
 }
+
+//每页默认为20条
+func (m *Article) GetArticleByPage(page int) []*Article {
+	var articles []*Article
+	_, err := m.Query().OrderBy("-id").Limit(20, (page-1)*20).All(&articles)
+	if err != nil {
+		fmt.Println("error")
+	}
+	return articles
+}

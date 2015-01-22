@@ -4,7 +4,7 @@
       <section class="am-panel am-panel-default">
         <div class="am-panel-hd">关于我</div>
         <div class="am-panel-bd">
-          <p>2014年毕业于华南理工大学，现从事互联网开发工作</p>
+          <p>2014年毕业于华南理工大学，现在酷狗音乐从事服务器开发工作</p>
           <a class="am-btn am-btn-success am-btn-sm" href="#">查看更多 →</a>
         </div>
       </section>
