@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+	"strconv"
 	"strings"
 	"time"
 )
@@ -37,6 +38,21 @@ func (this *AdminController) AddArticle() {
 	}
 
 	this.TplNames = "admin/addArticle.tpl"
+}
+
+func (this *AdminController) EditArticle() {
+	id, _ := strconv.Atoi(this.GetString("id"))
+	article := modules.Article{Id: id}
+	article.Read()
+	this.Data["article"] = article
+
+	content := this.GetString("content")
+	if content != "" {
+		article.Content = content
+		article.Update("Content")
+		this.Data["article"] = article
+	}
+	this.TplNames = "admin/editArticle.tpl"
 }
 
 func (this *AdminController) AddPhoto() {
