@@ -7,6 +7,7 @@
 			<div class="well nav-collapse sidebar-nav">
 				<ul class="nav nav-tabs nav-stacked main-menu">
 					<li class="nav-header hidden-tablet">日志</li>
+					<li><a class="ajax-link" href="/admin/index"><i class="icon-home"></i><span class="hidden-tablet">首页</span></a></li>
 					<li><a class="ajax-link" href="/admin/addarticle"><i class="icon-home"></i><span class="hidden-tablet">新建日志</span></a></li>
 					<li><a class="ajax-link" href="/admin/editarticle"><i class="icon-eye-open"></i><span class="hidden-tablet">编辑日志</span></a></li>
 					<li><a class="ajax-link" href="/admin/addphoto"><i class="icon-eye-open"></i><span class="hidden-tablet">上传图片</span></a></li>

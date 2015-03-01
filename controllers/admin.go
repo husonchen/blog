@@ -14,6 +14,10 @@ type AdminController struct {
 	baseController
 }
 
+func (this *AdminController) Index() {
+	this.TplNames = "admin/index.tpl"
+}
+
 func (this *AdminController) Login() {
 	username := this.GetString("username")
 	password := this.GetString("password")
