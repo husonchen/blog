@@ -1,6 +1,8 @@
 {{define "header"}}
 <head lang="en">
   <meta charset="UTF-8">
+  <meta name="author" content="陈晓辰" />
+  <meta name="keywords" content="陈晓辰,博客">
   <title>陈晓辰的博客</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport"
